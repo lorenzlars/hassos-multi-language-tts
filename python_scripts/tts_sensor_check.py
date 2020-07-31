@@ -48,18 +48,6 @@ def build_strings(sensors, translations):
     return full_translations
 
 
-# Replace 'Umlaute' with unicode
-def unicode_replacer(text):
-    text = text.replace('ä', '&#228;')
-    text = text.replace('ö', '&#246;')
-    text = text.replace('ü', '&#252;')
-    text = text.replace('Ä', '&#196;')
-    text = text.replace('Ö', '&#214;')
-    text = text.replace('Ü', '&#220;')
-
-    return text
-
-
 # Build the SSML
 def build_ssml(strings):
     first = True
@@ -73,7 +61,7 @@ def build_ssml(strings):
 
         body = body + \
             xml_voice_format.format(
-                name=voices[key], content=unicode_replacer(value))
+                name=voices[key], content=value)
 
     return xml_body_format.format(content=body)
 
