@@ -4,7 +4,8 @@ xml_voice_format = "<voice name=\"{name}\">{content}</voice>"
 xml_break_format = "<break time=\"{time}\" />"
 voices = {
     "de": "de-DE-KatjaNeural",
-    "it": "it-IT-ElsaNeural"
+    "it": "it-IT-ElsaNeural",
+    "jp": "ja-JP-NanamiNeural"
 }
 
 
